@@ -50,6 +50,7 @@ class UsersController < ApplicationController
   def destroy
     #complete this method
     users.delete(params[:id])
+    flash[:notice] = "You have successfully deleted the user."
   end
 
   private
