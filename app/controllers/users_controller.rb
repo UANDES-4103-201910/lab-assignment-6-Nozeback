@@ -39,8 +39,8 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1.json
   def update
     #complete this method
-    @user=current_account.users.find(params[:id])
-    users.update!(user_params)
+    @user=current_user.users.find(params[:id])
+    user.update!(user_params)
     flash[:notice] = "You have successfully updated your info."
     redirect_to @user
   end
